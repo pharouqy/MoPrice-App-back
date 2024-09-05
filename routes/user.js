@@ -13,6 +13,7 @@ import {
   forgotPassword,
   resetPassword,
 } from "../controllers/authController.js";
+import SendContactEmail from "../controllers/contactControllers.js";
 
 router.post("/login", login);
 router.post("/register", register);
@@ -23,5 +24,7 @@ router.delete("/user/:id", auth, deleteUser);
 
 router.post("/forgot-password", forgotPassword);
 router.post("/reset-password/:token", resetPassword);
+
+router.post("/contact", SendContactEmail);
 
 export default router;
