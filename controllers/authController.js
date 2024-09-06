@@ -1,6 +1,5 @@
 import User from "../models/user.js";
 import crypto from "crypto";
-import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
 import { hash as _hash } from "bcrypt";
@@ -29,7 +28,7 @@ export function forgotPassword(req, res) {
       user.save();
 
       // Créer un lien de réinitialisation
-      const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+      const resetUrl = `${process.env.FRONTEND_URL}reset-password/${resetToken}`;
 
       // Configurer nodemailer pour envoyer l'email
       const transporter = nodemailer.createTransport({
