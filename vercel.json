@@ -8,31 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/auth/login",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/auth/register",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/auth/logout",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/auth/user/(.*)",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/auth/forgot-password",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/auth/reset-password/(.*)",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/auth/contact",
+      "src": "/auth/(.*)",
       "dest": "/index.js"
     }
   ]
